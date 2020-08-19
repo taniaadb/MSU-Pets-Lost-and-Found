@@ -1,0 +1,17 @@
+Brainstorming Thursday 13.08:
+What we could include:
+* GPS tracker on the pet/ id or registration nr on the collar
+* IoT?
+* SQL storage for user (registered pets)
+* WebApi/mobile App 
+* Log-in system for users and animal shelters (separate access). Also a user does not have to be registered to see the shelters adds of `found pets` but should be registered to get more information/put an add of `lost pets` and maybe in order to access the chat
+* Athentication – login with the bank code
+* Search function for the shelters to look for adds of lost pets/registered addresses of users in a certain radius (5 km f.ex). A user can also use this function to find animal shelters in the same radius
+* A user can register that the pet is lost in the system
+* An animal shelter can search through the user database to see if a user has marked that the pet is lost (in case of no collar or reg nr on the collar). The animal shelter should also be able to look for an owner according to the registration number on the collar. 
+* If a user has been found via the registration number on the collar (obligatory?), an SMS should be send to the registered number of the user
+* The user needs to register: name, address, phone nr, type of pet, description and/or picture registration nr of the pet (could have other fields)
+* An animal shelter can also add messages with `pet found` and a generic description/picture of the pet. The user would have to describe the pet in more detail on the phone/pick up
+* A chat system for conversation between users (and animal shelters) 
+* If there are pictures of the pets in the database, we could have a machine learning system (bildegjenkjenning) to identify a found pet based on the picture (in case of no registration number for example) 
+* Should we have some subscriptions?
