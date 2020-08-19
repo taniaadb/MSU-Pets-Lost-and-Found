@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vef9f5pPa4r7VK5Ew7V4sSWjfKRvMqy6g5AHwU6cq70o4JmLSvox9nATVLn9pEof8KYpcGq3V8/uqvYMJDQo1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\duy.tan.tran\\Documents\\Kurs\\MSU\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\duy.tan.tran\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
