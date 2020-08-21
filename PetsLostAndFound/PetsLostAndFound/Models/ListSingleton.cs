@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace PetsLostAndFound.Models
@@ -80,8 +81,13 @@ namespace PetsLostAndFound.Models
                     RegisterId = ""
                 }
             };
-
         }
+
+        public List<Animal> GetAllAnimals()
+        {
+            return _allAnimals;
+        }
+
 
 
 
