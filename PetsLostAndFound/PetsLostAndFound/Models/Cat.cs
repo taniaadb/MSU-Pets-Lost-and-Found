@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 
 namespace PetsLostAndFound.Models
 {
-    public class Cat
+    public class Cat : Animal
     {
+        public Cat()
+        {
+            this.Type = BaseType.Cat;
+        }
     }
 }
