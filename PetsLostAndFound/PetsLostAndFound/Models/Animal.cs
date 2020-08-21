@@ -11,6 +11,7 @@ namespace PetsLostAndFound.Models
         public string PetName { get; set; }
         public string ImageUrl { get; set; }
         public BaseType Type { get; set; }
+        public string Breed { get; set; }
         public string Description { get; set; }
         public bool Microchipped { get; set; }
         public string Microchip { get; set; }
