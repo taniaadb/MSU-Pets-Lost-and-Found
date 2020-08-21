@@ -24,6 +24,67 @@ namespace PetsLostAndFound.Models
             }
              }
 
+        private ListSingleton()
+        {
+            _allAnimals = new List<Animal>()
+            {
+                new Dog()
+                {
+                    Id = 1,
+                    PetName = "Dog Pet name",
+                    ImageUrl = "",
+                    Type = BaseType.Dog,
+                    Breed = "",
+                    Description = "",
+                    Microchipped = false,
+                    Microchip = "",
+                    RegisterId = ""
+                },
+
+                new Cat()
+                {
+                    Id = 2,
+                    PetName = "Cat Pet name",
+                    ImageUrl = "",
+                    Type = BaseType.Cat,
+                    Breed = "",
+                    Description = "",
+                    Microchipped = false,
+                    Microchip = "",
+                    RegisterId = ""
+                },
+
+                new Bird()
+                {
+                    Id = 3,
+                    PetName = "Bird Pet name",
+                    ImageUrl = "",
+                    Type = BaseType.Bird,
+                    Breed = "",
+                    Description = "",
+                    Microchipped = false,
+                    Microchip = "",
+                    RegisterId = ""
+                },
+
+                new Other()
+                {
+                    Id = 1,
+                    PetName = "Other Pet name",
+                    ImageUrl = "",
+                    Type = BaseType.Other,
+                    Breed = "",
+                    Description = "",
+                    Microchipped = false,
+                    Microchip = "",
+                    RegisterId = ""
+                }
+            };
+
+        }
+
+
+
        
     }
 }
