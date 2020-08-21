@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace PetsLostAndFound.Models
 {
-    public class Pets // use partial keyword
+    public class Animal // use partial keyword
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string PetName { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public bool Microchipped { get; set; }
@@ -17,5 +17,13 @@ namespace PetsLostAndFound.Models
 
 
 
+    }
+
+    public enum BaseType
+    {
+        Dog, 
+        Cat,
+        Bird,
+        Other
     }
 }
