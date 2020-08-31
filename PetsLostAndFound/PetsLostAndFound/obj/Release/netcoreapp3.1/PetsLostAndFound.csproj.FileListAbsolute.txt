@@ -214,3 +214,4 @@ C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLost
 C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\obj\Release\netcoreapp3.1\Razor\Pages\Pets\Details.cshtml.g.cs
 C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\obj\Release\netcoreapp3.1\Razor\Pages\Pets\Edit.cshtml.g.cs
 C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\obj\Release\netcoreapp3.1\Razor\Pages\Pets\Index.cshtml.g.cs
+C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\PetsLostAndFoundMSU - Web Deploy\profile.arm.json
