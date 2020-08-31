@@ -39,7 +39,7 @@ namespace PetsLostAndFound.Models
                     Description = "",
                     Microchipped = false,
                     Microchip = "",
-                    RegisterId = ""
+                    RFID = ""
                 },
 
                 new Cat()
@@ -52,7 +52,7 @@ namespace PetsLostAndFound.Models
                     Description = "",
                     Microchipped = false,
                     Microchip = "",
-                    RegisterId = ""
+                    RFID = ""
                 },
 
                 new Bird()
@@ -65,7 +65,7 @@ namespace PetsLostAndFound.Models
                     Description = "",
                     Microchipped = false,
                     Microchip = "",
-                    RegisterId = ""
+                    RFID = ""
                 },
 
                 new Other()
@@ -78,7 +78,7 @@ namespace PetsLostAndFound.Models
                     Description = "",
                     Microchipped = false,
                     Microchip = "",
-                    RegisterId = ""
+                    RFID = ""
                 }
             };
         }
