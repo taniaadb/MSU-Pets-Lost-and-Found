@@ -1,1 +1,3 @@
 Change from manual deployment to continuous deployment of apps using Azure DevOps with Azure Pipelines
+
+- Fix controllers for all pets
