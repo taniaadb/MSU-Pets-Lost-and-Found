@@ -9,11 +9,11 @@ namespace PetsLostAndFound.Data
 {
     public class PetsLostAndFoundContext : DbContext
     {
-        public PetsLostAndFoundContext (DbContextOptions<PetsLostAndFoundContext> options)
+        public PetsLostAndFoundContext(DbContextOptions<PetsLostAndFoundContext> options)
             : base(options)
         {
         }
 
-        public DbSet<PetsLostAndFound.Models.Pet> Pet { get; set; }
+        public DbSet<Pet> Pet { get; set; }
     }
 }

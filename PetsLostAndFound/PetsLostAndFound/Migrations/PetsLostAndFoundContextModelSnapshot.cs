@@ -21,7 +21,7 @@ namespace PetsLostAndFound.Migrations
 
             modelBuilder.Entity("PetsLostAndFound.Models.Pet", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -30,7 +30,6 @@ namespace PetsLostAndFound.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Breed")
-                        .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
@@ -40,11 +39,11 @@ namespace PetsLostAndFound.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("Lost")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("LostDate")
+                    b.Property<DateTime?>("LastSeen")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("Lost")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Microchip")
                         .HasColumnType("nvarchar(max)");
@@ -60,7 +59,7 @@ namespace PetsLostAndFound.Migrations
                     b.Property<string>("RegisterId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Pet");
                 });

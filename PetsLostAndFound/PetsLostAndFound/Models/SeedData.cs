@@ -33,9 +33,8 @@ namespace PetsLostAndFound.Models
                                 Microchip = "",
                                 RegisterId = "QS125",
                                 AdoptionDate = DateTime.Parse("2000-3-13"),
-                                Lost = true,
-                                LostDate = DateTime.Parse("2010-3-13")
-
+                                Lost = false,
+                                LastSeen = DateTime.Parse("2020-3-1")
 
                             },
 
@@ -48,9 +47,9 @@ namespace PetsLostAndFound.Models
                                 Microchipped = false,
                                 Microchip = "",
                                 RegisterId = "JU188",
-                               
-                                AdoptionDate = DateTime.Parse("2002-2-2")
-                                
+                                Lost = false,
+                                AdoptionDate = DateTime.Parse("2002-2-2"),
+                                LastSeen = DateTime.Parse("2020-5-5")
 
                             }
                         ); ;

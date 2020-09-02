@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("e8f94a11-da99-4622-9ce8-db5286a7da1d")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("4a3c0ed6-f58a-4581-8a74-425d1c861f9d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetsLostAndFound")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

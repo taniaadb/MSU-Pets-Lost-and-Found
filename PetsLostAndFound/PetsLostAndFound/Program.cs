@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using PetsLostAndFound.Data;
 using PetsLostAndFound.Models;
 
 namespace PetsLostAndFound
@@ -16,6 +17,7 @@ namespace PetsLostAndFound
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
+
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -25,6 +27,7 @@ namespace PetsLostAndFound
                 }
                 catch (Exception ex)
                 {
+
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     logger.LogError(ex, "An error occurred seeding the DB.");
                 }
