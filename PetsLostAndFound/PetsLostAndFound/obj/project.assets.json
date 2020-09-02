@@ -83,25 +83,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tania.bulz\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\duy.tan.tran\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tania.bulz\\Documents\\MicrosoftUni\\Case\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
+      "projectUniqueName": "C:\\Users\\duy.tan.tran\\Documents\\Kurs\\MSU\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
       "projectName": "PetsLostAndFound",
-      "projectPath": "C:\\Users\\tania.bulz\\Documents\\MicrosoftUni\\Case\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
-      "packagesPath": "C:\\Users\\tania.bulz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tania.bulz\\Documents\\MicrosoftUni\\Case\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\obj\\",
+      "projectPath": "C:\\Users\\duy.tan.tran\\Documents\\Kurs\\MSU\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
+      "packagesPath": "C:\\Users\\duy.tan.tran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\duy.tan.tran\\Documents\\Kurs\\MSU\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tania.bulz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\duy.tan.tran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -110,7 +108,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/dttran/18c75ef4-bd3f-4db3-b2a4-f7bec976385b/_packaging/PartsUnlimitedShared/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {

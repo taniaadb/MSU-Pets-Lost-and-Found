@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Pjent6/DQH/ZoP9qMPoCLchnA2wz/rynPihXQsrOLX1n+lGNH/M9IQAE0eRIe+a20VaCke+cBZTjnCigcNs/QA==",
+  "dgSpecHash": "OF+CsAgkOki6JDnRWQY1JLnfM/EkxznxE9NWg6XUYdQf5TdHfXD+kw4KOmILV0NT6fPHLIvk7U7puGdKh9ykjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tania.bulz\\Documents\\MicrosoftUni\\Case\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
+  "projectFilePath": "C:\\Users\\duy.tan.tran\\Documents\\Kurs\\MSU\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\PetsLostAndFound.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tania.bulz\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\duy.tan.tran\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
   ],
   "logs": []
 }
