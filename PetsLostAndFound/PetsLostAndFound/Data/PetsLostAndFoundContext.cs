@@ -14,6 +14,6 @@ namespace PetsLostAndFound.Data
         {
         }
 
-        public DbSet<Pet> Pet { get; set; }
+        public DbSet<Animal> Animal { get; set; }
     }
 }

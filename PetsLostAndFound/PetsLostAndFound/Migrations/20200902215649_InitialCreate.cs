@@ -8,31 +8,32 @@ namespace PetsLostAndFound.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Pet",
+                name: "Animal",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
+                    PetName = table.Column<string>(maxLength: 60, nullable: false),
+                    Age = table.Column<int>(maxLength: 30, nullable: false),
+                    Breed = table.Column<string>(nullable: true),
                     ImageUrl = table.Column<string>(nullable: true),
+                    Type = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     Microchipped = table.Column<bool>(nullable: false),
-                    Microchip = table.Column<string>(nullable: true),
-                    RegisterId = table.Column<string>(nullable: true),
-                    AdoptionDate = table.Column<DateTime>(nullable: false),
-                    Breed = table.Column<string>(nullable: true),
-                    Lost = table.Column<bool>(nullable: false)
+                    RFID = table.Column<string>(nullable: true),
+                    Lost = table.Column<bool>(nullable: true),
+                    LastSeen = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pet", x => x.Id);
+                    table.PrimaryKey("PK_Animal", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Pet");
+                name: "Animal");
         }
     }
 }

@@ -10,49 +10,50 @@ using PetsLostAndFound.Models;
 
 namespace PetsLostAndFound.Controllers
 {
-    public class PetsController : Controller
+    //OBS: when scaffoldingwe used a packagemanager to generate db
+    public class AnimalsController : Controller
     {
         private readonly PetsLostAndFoundContext _context;
 
-        public PetsController(PetsLostAndFoundContext context)
+        public AnimalsController(PetsLostAndFoundContext context)
         {
             _context = context;
         }
 
-        // GET: Pets
-        public async Task<IActionResult> Index(string petBreed, string searchString)
+        // GET: Animals based on search criteria
+        public async Task<IActionResult> Index(string animalType, string searchString)
         {
             //OBS: we could search by type and breed as well when we have the database and classes
             //info about this in the tutorial
             //defined linq query
-            IQueryable<string> breedQuery = from p in _context.Pet
-                                            orderby p.Breed
-                                            select p.Breed;
+            /*IQueryable<string> typeQuery = from a in _context.Animal
+                                                //convert baseType to string representation
+                                                //bug here
+                                            orderby a.Type
+                                            select a.Type;*/
 
-            var pets = from pet in _context.Pet
-                       select pet;
+            var animals = from animal in _context.Animal
+                          select animal;
             if (!String.IsNullOrEmpty(searchString))
             {
-                pets = pets.Where(p => p.RegisterId.Contains(searchString));
+                animals = animals.Where(p => p.RFID.Contains(searchString));
             }
 
-            if (!string.IsNullOrEmpty(petBreed))
+            /*if (!string.IsNullOrEmpty(animalType))
             {
-                pets = pets.Where(x => x.Breed == petBreed);
+                animals = animals.Where(x => x.Breed == animalType);
             }
 
-            var petBreedVM = new PetBreedViewModel
+            var animalTypeVM = new AnimalTypeViewModel
             {
-                Breeds = new SelectList(await breedQuery.Distinct().ToListAsync()),
-                Pets = await pets.ToListAsync()
-            };
+                Type = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                Animal = await animals.ToListAsync()
+            }; */
 
-            return View(petBreedVM);
+            return View(await animals.ToListAsync());
         }
 
- 
-
-        // GET: Pets/Details/5
+        // GET: Animals/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -60,39 +61,39 @@ namespace PetsLostAndFound.Controllers
                 return NotFound();
             }
 
-            var pet = await _context.Pet
+            var animal = await _context.Animal
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (pet == null)
+            if (animal == null)
             {
                 return NotFound();
             }
 
-            return View(pet);
+            return View(animal);
         }
 
-        // GET: Pets/Create
+        // GET: Animals/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Pets/Create
+        // POST: Animals/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,ImageUrl,Description,Microchipped,Microchip,RegisterId,AdoptionDate,Breed,Lost,LastSeen")] Pet pet)
+        public async Task<IActionResult> Create([Bind("Id,PetName,Age,Breed,ImageUrl,Type,Description,Microchipped,RFID,Lost,LastSeen")] Animal animal)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(pet);
+                _context.Add(animal);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(pet);
+            return View(animal);
         }
 
-        // GET: Pets/Edit/5
+        // GET: Animals/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -100,23 +101,22 @@ namespace PetsLostAndFound.Controllers
                 return NotFound();
             }
 
-            var pet = await _context.Pet.FindAsync(id);
-            if (pet == null)
+            var animal = await _context.Animal.FindAsync(id);
+            if (animal == null)
             {
                 return NotFound();
             }
-            return View(pet);
+            return View(animal);
         }
 
-        // POST: Pets/Edit/5
+        // POST: Animals/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //only include fields you want to change - can make other fields invisible
-        public async Task<IActionResult> Edit(int id, [Bind("ImageUrl,Description,Microchipped,Microchip,RegisterId,Lost,LastSeen")] Pet pet)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PetName,Age,Breed,ImageUrl,Type,Description,Microchipped,RFID,Lost,LastSeen")] Animal animal)
         {
-            if (id != pet.Id)
+            if (id != animal.Id)
             {
                 return NotFound();
             }
@@ -125,12 +125,12 @@ namespace PetsLostAndFound.Controllers
             {
                 try
                 {
-                    _context.Update(pet);
+                    _context.Update(animal);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PetExists(pet.Id))
+                    if (!AnimalExists(animal.Id))
                     {
                         return NotFound();
                     }
@@ -141,10 +141,10 @@ namespace PetsLostAndFound.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(pet);
+            return View(animal);
         }
 
-        // GET: Pets/Delete/5
+        // GET: Animals/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -152,30 +152,30 @@ namespace PetsLostAndFound.Controllers
                 return NotFound();
             }
 
-            var pet = await _context.Pet
+            var animal = await _context.Animal
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (pet == null)
+            if (animal == null)
             {
                 return NotFound();
             }
 
-            return View(pet);
+            return View(animal);
         }
 
-        // POST: Pets/Delete/5
+        // POST: Animals/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var pet = await _context.Pet.FindAsync(id);
-            _context.Pet.Remove(pet);
+            var animal = await _context.Animal.FindAsync(id);
+            _context.Animal.Remove(animal);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PetExists(int id)
+        private bool AnimalExists(int id)
         {
-            return _context.Pet.Any(e => e.Id == id);
+            return _context.Animal.Any(e => e.Id == id);
         }
     }
 }

@@ -27,6 +27,7 @@ namespace PetsLostAndFound
         {
             services.AddControllersWithViews();
 
+            //database and connection string
             services.AddDbContext<PetsLostAndFoundContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("PetsLostAndFoundContext")));
         }

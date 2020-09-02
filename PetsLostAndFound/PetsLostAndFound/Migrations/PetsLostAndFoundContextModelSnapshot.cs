@@ -19,19 +19,20 @@ namespace PetsLostAndFound.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("PetsLostAndFound.Models.Pet", b =>
+            modelBuilder.Entity("PetsLostAndFound.Models.Animal", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("AdoptionDate")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("Age")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasMaxLength(30);
 
                     b.Property<string>("Breed")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -42,26 +43,26 @@ namespace PetsLostAndFound.Migrations
                     b.Property<DateTime?>("LastSeen")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("Lost")
+                    b.Property<bool?>("Lost")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Microchip")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Microchipped")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("PetName")
                         .IsRequired()
                         .HasColumnType("nvarchar(60)")
                         .HasMaxLength(60);
 
-                    b.Property<string>("RegisterId")
+                    b.Property<string>("RFID")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pet");
+                    b.ToTable("Animal");
                 });
 #pragma warning restore 612, 618
         }

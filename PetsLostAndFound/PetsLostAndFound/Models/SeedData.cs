@@ -12,45 +12,71 @@ namespace PetsLostAndFound.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
+            //here we are using the data from database!
             using (var context = new PetsLostAndFoundContext(
                 serviceProvider.GetRequiredService<
                     DbContextOptions<PetsLostAndFoundContext>>()))
             {
                 // Look for any pets.
-                if (context.Pet.Any())
+                if (context.Animal.Any())
                 {
                     return;   // DB has been seeded
                 }
 
-                context.Pet.AddRange(
-                            new Pet
+                context.Animal.AddRange(
+                            new Dog()
                             {
-                                Name = "Rambo",
+                                //Id = 1,
+                                PetName = "Rambo",
                                 Breed = "Border Collie",
+                                Age = 10,
+                                Type = BaseType.Dog,
                                 ImageUrl = "",
                                 Description = "Old doggo",
-                                Microchipped = false,
-                                Microchip = "",
-                                RegisterId = "QS125",
-                                AdoptionDate = DateTime.Parse("2000-3-13"),
-                                Lost = false,
-                                LastSeen = DateTime.Parse("2020-3-1")
+                                Microchipped = true,
+                                RFID = "QS125",
+                                Lost = false
 
                             },
 
-                            new Pet
+                            new Cat()
                             {
-                                Name = "Munchkin",
+                                //Id = 2,
+                                PetName = "Munchkin",
                                 Breed = "Persian",
+                                Age = 3,
                                 ImageUrl = "",
                                 Description = "Old cat munch",
-                                Microchipped = false,
-                                Microchip = "",
-                                RegisterId = "JU188",
-                                Lost = false,
-                                AdoptionDate = DateTime.Parse("2002-2-2"),
-                                LastSeen = DateTime.Parse("2020-5-5")
+                                Microchipped = true,
+                                RFID = "JU188",
+                                Lost = true,
+                                LastSeen = DateTime.Parse("2010-2-23")
+                            },
 
+                            new Bird()
+                            {
+                                //Id = 3,
+                                PetName = "Bird Pet name",
+                                ImageUrl = "",
+                                Age = 4,
+                                Type = BaseType.Bird,
+                                Breed = "",
+                                Description = "",
+                                Microchipped = false,
+                                RFID = ""
+                            },
+
+                            new Other()
+                            {
+                                //Id = 1,
+                                PetName = "Other Pet name",
+                                ImageUrl = "",
+                                Age = 9,
+                                Type = BaseType.Other,
+                                Breed = "",
+                                Description = "",
+                                Microchipped = false,
+                                RFID = ""
                             }
                         ); ;
                 context.SaveChanges();

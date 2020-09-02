@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace PetsLostAndFound.Models
 {
-    public class PetBreedViewModel
+    public class AnimalTypeViewModel
     {
-        public List<Pet> Pets { get; set; }
-        public SelectList Breeds { get; set; }
-        public string PetBreed { get; set; }
+        public List<Animal> Animal { get; set; }
+        public SelectList Type { get; set; }
+        public string AnimalType { get; set; }
         public string SearchString { get; set; }
     }
 }
