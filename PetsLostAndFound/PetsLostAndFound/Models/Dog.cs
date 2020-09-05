@@ -9,7 +9,8 @@ namespace PetsLostAndFound.Models
     {
         public Dog()
         {
-            this.Type = BaseType.Dog;
+            this.SubType = BaseType.Dog;
+            this.Type = this.SubType.ToString();
         }
     }
 }

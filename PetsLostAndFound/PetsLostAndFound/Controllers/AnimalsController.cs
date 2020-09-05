@@ -26,11 +26,9 @@ namespace PetsLostAndFound.Controllers
             //OBS: we could search by type and breed as well when we have the database and classes
             //info about this in the tutorial
             //defined linq query
-            /*IQueryable<string> typeQuery = from a in _context.Animal
-                                                //convert baseType to string representation
-                                                //bug here
+            IQueryable<string> typeQuery = from a in _context.Animal
                                             orderby a.Type
-                                            select a.Type;*/
+                                            select a.Type;
 
             var animals = from animal in _context.Animal
                           select animal;
@@ -39,18 +37,18 @@ namespace PetsLostAndFound.Controllers
                 animals = animals.Where(p => p.RFID.Contains(searchString));
             }
 
-            /*if (!string.IsNullOrEmpty(animalType))
+            if (!string.IsNullOrEmpty(animalType))
             {
-                animals = animals.Where(x => x.Breed == animalType);
+                animals = animals.Where(x => x.Type == animalType);
             }
 
             var animalTypeVM = new AnimalTypeViewModel
             {
                 Type = new SelectList(await typeQuery.Distinct().ToListAsync()),
                 Animal = await animals.ToListAsync()
-            }; */
+            }; 
 
-            return View(await animals.ToListAsync());
+            return View(animalTypeVM);
         }
 
         // GET: Animals/Details/5

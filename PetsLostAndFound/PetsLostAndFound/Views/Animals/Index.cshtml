@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PetsLostAndFound.Models.Animal>
+﻿@model PetsLostAndFound.Models.AnimalTypeViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -11,9 +11,9 @@
 </p>
 <form asp-controller="Animals" asp-action="Index" method="get">
     <p>
-        @*<select asp-for="AnimalType" asp-items="Model.Type">
+        <select asp-for="AnimalType" asp-items="Model.Type">
             <option value="">All</option>
-        </select> *@
+        </select> 
 
         RFID: <input type="text" name="SearchString">
         <input type="submit" value="Filter" />
@@ -23,40 +23,40 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PetName)
+                @Html.DisplayNameFor(model => model.Animal[0].PetName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Age)
+                @Html.DisplayNameFor(model => model.Animal[0].Age)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Breed)
+                @Html.DisplayNameFor(model => model.Animal[0].Breed)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
+                @Html.DisplayNameFor(model => model.Animal[0].ImageUrl)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Type)
+                @Html.DisplayNameFor(model => model.Animal[0].Type)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.Animal[0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Microchipped)
+                @Html.DisplayNameFor(model => model.Animal[0].Microchipped)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RFID)
+                @Html.DisplayNameFor(model => model.Animal[0].RFID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Lost)
+                @Html.DisplayNameFor(model => model.Animal[0].Lost)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastSeen)
+                @Html.DisplayNameFor(model => model.Animal[0].LastSeen)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Animal) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PetName)

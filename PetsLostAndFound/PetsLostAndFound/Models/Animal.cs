@@ -15,7 +15,7 @@ namespace PetsLostAndFound.Models
         public string Breed { get; set; }
         public string ImageUrl { get; set; }
         [Required]
-        public BaseType Type { get; set; }
+        public BaseType SubType { get; set; }
         public string Description { get; set; }
         [Required]
         public bool Microchipped { get; set; }
@@ -31,6 +31,7 @@ namespace PetsLostAndFound.Models
         [Display(Name = "Lost Date"), DataType(DataType.Date)]
         [Range(typeof(DateTime), "1/1/1966", "1/1/2021")]
         public DateTime? LastSeen { get; set; }
+        public string Type { get; set; }
     }
 
     public enum BaseType
@@ -40,4 +41,5 @@ namespace PetsLostAndFound.Models
         Bird,
         Other
     }
+
 }

@@ -9,7 +9,8 @@ namespace PetsLostAndFound.Models
     {
         public Cat()
         {
-            this.Type = BaseType.Cat;
+            this.SubType = BaseType.Cat;
+            this.Type = this.SubType.ToString();
         }
     }
 }
