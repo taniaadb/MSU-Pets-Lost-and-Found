@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PetsLostAndFound.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,12 +17,13 @@ namespace PetsLostAndFound.Migrations
                     Age = table.Column<int>(maxLength: 30, nullable: false),
                     Breed = table.Column<string>(nullable: true),
                     ImageUrl = table.Column<string>(nullable: true),
-                    Type = table.Column<int>(nullable: false),
+                    SubType = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     Microchipped = table.Column<bool>(nullable: false),
                     RFID = table.Column<string>(nullable: true),
                     Lost = table.Column<bool>(nullable: true),
-                    LastSeen = table.Column<DateTime>(nullable: true)
+                    LastSeen = table.Column<DateTime>(nullable: true),
+                    Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

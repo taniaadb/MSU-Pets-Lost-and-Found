@@ -68,7 +68,7 @@
                 @Html.DisplayFor(modelItem => item.Breed)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
+                <img src="@Url.Content(item.ImageUrl)" alt="Image" style="max-width:100%;" title="Pet"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Type)

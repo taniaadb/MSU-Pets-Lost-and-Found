@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using PetsLostAndFound.Models;
 
 namespace PetsLostAndFound.Controllers
@@ -12,10 +13,13 @@ namespace PetsLostAndFound.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IOptions<StorageAccountOptions> _optionsAccessor;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IOptions<StorageAccountOptions> optionsAccessor)
         {
             _logger = logger;
+            _optionsAccessor = optionsAccessor;
+            //blobUtility = new Home.BlobUtility
         }
 
         public IActionResult Index()
@@ -33,5 +37,7 @@ namespace PetsLostAndFound.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }

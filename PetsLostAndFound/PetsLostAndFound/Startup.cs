@@ -30,6 +30,9 @@ namespace PetsLostAndFound
             //database and connection string
             services.AddDbContext<PetsLostAndFoundContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("PetsLostAndFoundContext")));
+
+            //configure storage account
+            services.Configure<StorageAccountOptions>(Configuration.GetSection("StorageAccount"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

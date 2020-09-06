@@ -15,12 +15,10 @@ namespace PetsLostAndFound
     public class Program
     {
         public static void Main(string[] args)
-        {
-           
-            
+        { 
             
             // local database version
-              var host = CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args).Build();
 
             using (var scope = host.Services.CreateScope())
             {

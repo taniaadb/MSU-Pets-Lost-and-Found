@@ -178,3 +178,7 @@ C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLost
 C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\obj\Release\netcoreapp3.1\PetsLostAndFound.csproj.CoreCompileInputs.cache
 C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\obj\Release\netcoreapp3.1\PetsLostAndFound.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\petslostandfound - Web Deploy\profile.arm.json
+C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\petslostandfound - Web Deploy1\profile.arm.json
+C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\petslostandfound - Web Deploy2\profile.arm.json
+C:\Users\tania.bulz\Documents\MicrosoftUni\Case\MSU-Pets-Lost-and-Found\PetsLostAndFound\PetsLostAndFound\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\petslostandfound - Web Deploy3\profile.arm.json

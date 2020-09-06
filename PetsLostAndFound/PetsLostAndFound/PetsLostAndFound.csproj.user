@@ -16,7 +16,7 @@
     <WebStackScaffolding_DbContextTypeFullName>PetsLostAndFound.Data.PetsLostAndFoundContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
-    <NameOfLastUsedPublishProfile>PetsLostAndFoundMSU - Web Deploy</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>petslostandfound - Web Deploy3</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

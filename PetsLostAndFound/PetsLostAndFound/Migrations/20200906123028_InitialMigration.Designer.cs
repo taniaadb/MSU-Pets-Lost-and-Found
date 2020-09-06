@@ -10,8 +10,8 @@ using PetsLostAndFound.Data;
 namespace PetsLostAndFound.Migrations
 {
     [DbContext(typeof(PetsLostAndFoundContext))]
-    [Migration("20200905132651_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200906123028_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,8 +59,11 @@ namespace PetsLostAndFound.Migrations
                     b.Property<string>("RFID")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Type")
+                    b.Property<int>("SubType")
                         .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
