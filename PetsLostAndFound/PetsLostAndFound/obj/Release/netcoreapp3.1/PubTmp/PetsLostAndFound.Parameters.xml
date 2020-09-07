@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="PetsLostAndFoundApp" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\duy\.tan\.tran\\Documents\\Kurs\\MSU\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  <parameter name="IIS Web Application Name" description="" value="petslostandfound" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\tania\.bulz\\Documents\\MicrosoftUni\\Case\\MSU-Pets-Lost-and-Found\\PetsLostAndFound\\PetsLostAndFound\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

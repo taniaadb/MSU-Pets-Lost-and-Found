@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsLostAndFound", "PetsLostAndFound\PetsLostAndFound.csproj", "{72C72F3D-1A84-48D3-9B53-A54B0D4058A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsLostAndFound", "PetsLostAndFound\PetsLostAndFound.csproj", "{A4E9FFD8-7FAC-4003-9A51-534C8CC54B24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{72C72F3D-1A84-48D3-9B53-A54B0D4058A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72C72F3D-1A84-48D3-9B53-A54B0D4058A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72C72F3D-1A84-48D3-9B53-A54B0D4058A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72C72F3D-1A84-48D3-9B53-A54B0D4058A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E9FFD8-7FAC-4003-9A51-534C8CC54B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E9FFD8-7FAC-4003-9A51-534C8CC54B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E9FFD8-7FAC-4003-9A51-534C8CC54B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E9FFD8-7FAC-4003-9A51-534C8CC54B24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {49E537E5-030F-46FD-A78E-DBB79E364F57}
+		SolutionGuid = {12B7962C-CB31-4FB5-90E7-6B571CB47307}
 	EndGlobalSection
 EndGlobal
