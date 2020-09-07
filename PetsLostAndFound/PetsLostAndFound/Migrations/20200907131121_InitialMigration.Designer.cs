@@ -10,7 +10,7 @@ using PetsLostAndFound.Data;
 namespace PetsLostAndFound.Migrations
 {
     [DbContext(typeof(PetsLostAndFoundContext))]
-    [Migration("20200906123028_InitialMigration")]
+    [Migration("20200907131121_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
